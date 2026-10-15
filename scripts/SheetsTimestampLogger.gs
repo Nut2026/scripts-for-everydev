@@ -8,8 +8,11 @@
  * Column B  ->  Time                (written on every entry)
  * Column C  ->  User input          (when written, triggers Column A & B)
  *
- * IMPORTANT: A column B is written with every column C, but column A is only written
+ * IMPORTANT: 
+ * - A column B is written with every column C, but column A is only written
  * when the days are different, i.e. you can only ever see one "15-10-10 (Thu)."
+ * - Row 1 is reserved as the header row. The script intentionally skips row 1 edits. As such, edits on the first row will not trigger
+ * any auto-logging. Please begin your logging on row 2.
  * 
  * To use, please:
  * 1. Change the sheet tab name in Line 41 (currently placeholder as "Sheets 1") to the sheet tab you're working on. 
