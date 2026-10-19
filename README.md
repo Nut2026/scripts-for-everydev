@@ -16,7 +16,7 @@ Thanks for contributing! Feel free to open an Issue to suggest a script or a PR 
 - Create your project/program structure from an ASCII/text-based directory tree, right in the terminal. Just like this.
 ![`generate_directory_tree.py`'s Demo.](assets/generate-directory-tree.gif)
 
-#### 2. `AutoTimestampLogger
+#### 2. `AutoTimestampLogger.gs`
 - Date added: 15/10/25 Thu
 - A Google Sheets Script (Extensions > App Script) that auto-logs the timestamp (date, day, and local time) with every entry.
 ![`AutoTimestampLogger`'s Demo.](assets/auto-timestamp-logger.gif)
