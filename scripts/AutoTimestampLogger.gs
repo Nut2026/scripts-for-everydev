@@ -1,8 +1,10 @@
 /**
  * This is an Apps Script for Google Sheets.
  * 
- * It automatically records the date (column A) and timestamp (column B) whenever
- * you type something into column C of the same row.
+ * It automatically records the date (column A) and timestamp (column B)
+ * whenever you type something into column C of the same row. A border
+ * is drawn between each day. This single script can be applied directly
+ * to more than one sheet tab. 
  *
  * Column A  ->  Date + day-of-week  (written only on the first entry of a new day)
  * Column B  ->  Time                (written on every entry)
@@ -11,13 +13,15 @@
  * IMPORTANT: 
  * - A column B is written with every column C, but column A is only written
  * when the days are different, i.e. you can only ever see one "15-10-10 (Thu)."
- * - Row 1 is reserved as the header row. The script intentionally skips row 1 edits. As such, edits on the first row will not trigger
- * any auto-logging. Please begin your logging on row 2.
+ * - Row 1 is reserved as the header row. The script intentionally skips row 1 edits. As such, 
+ * edits on the first row will not trigger any auto-logging. Please begin your logging on row 2.
  * 
  * To use, please:
- * 1. Change the sheet tab name in Line 41 (currently placeholder as "Sheets 1") to the sheet tab you're working on. 
+ * 1. Change the sheet tab list in Line 49 to the names of the sheet tab(s) you're working on.
+ * 2. Adjust the daily borders' property (thickness/style) at line 88.
+ * You can comment out/remove the three lines if not needed.
  * 
- * Watch it work and enjoy! Feel free to customise the script to fit your 
+ * Watch it work and enjoy! Feel free to customise the script to fit your style/workflow. 
  * 
  * Usage examples: Manual logging, journalling, or when you'd like to watch your
  * ideas evolve over hours.
@@ -29,8 +33,10 @@
  *   |  2026-10-15 (Thu) |  09:14:02  |  first task        |
  *   |                   |  11:32:47  |  second task       |
  *   |                   |  15:08:11  |  third task        |
+ *   |-----------------------------------------------------|
  *   |  2026-10-16 (Fri) |  08:45:20  |  next-day task     |
  *   |                   |  10:20:05  |  another task      |
+ *   |-----------------------------------------------------|
  *   |  2026-10-17 (Sat) |  22:01:33  |  new day again     |
  * 
  */
@@ -41,7 +47,8 @@ function onEdit(e) {
   var col = range.getColumn();
   var row = range.getRow();
 
-  if (sheet.getName() !== "Sheets 1") return;
+  var allowedSheets = ["Sheet 1"];
+  if (allowedSheets.indexOf(sheet.getName()) === -1) return;
 
   if (col !== 3 || row === 1) return;
 
@@ -76,6 +83,12 @@ function onEdit(e) {
 
   if (lastDateStr !== todayStr) {
     dateCell.setValue(todayStr);
+    // Comment out these three lines to remove the daily borders
+    sheet.getRange(row, 1, 1, sheet.getLastColumn())
+      .setBorder(true, null, null, null, null, null,
+        "#000000", SpreadsheetApp.BorderStyle.SOLID_MEDIUM);
+    // Feel free to change `SOLID_MEDIUM` to other
+    // border properties as well
   } else {
     dateCell.clearContent();
   }
