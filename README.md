@@ -18,3 +18,5 @@ Thanks for contributing! Feel free to open an Issue to suggest a script or a PR 
 
 #### 2. `AutoTimestampLogger.gs`
 - Date added: 15/10/25 Thu
+- A **Google Sheets** Script (Extensions > App Script) that **auto-logs the timestamp** (date, day, and local time) with every entry.
+![`AutoTimestampLogger`'s Demo.](assets/auto-timestamp-loggerr.gif)
