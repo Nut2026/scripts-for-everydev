@@ -1,5 +1,6 @@
 """
 Meet Symbolic, a converter that turns your images into braille-style ASCII art - right in your terminal.
+PNG, JPG, JPEG, and WEBP -~ all supported!
 
 How to use:
 1. Please install the numpy and pillow modules.
