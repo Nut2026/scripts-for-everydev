@@ -20,3 +20,9 @@ Thanks for contributing! Feel free to open an Issue to suggest a script or a PR 
 - Date added: 15/10/25 Thu
 - A **Google Sheets** Script (Extensions > App Script) that **auto-logs the timestamp** (date, day, and local time) with every entry.
 ![`AutoTimestampLogger`'s Demo.](assets/auto-timestamp-logger.gif?v=2)
+
+#### 3. `ascii_art_generator.py`
+- AKA: Symbolic
+- Date added: 15/10/25 Thu
+- Create **ASCII/text-based art**/depictions of your **PNG/JPG/JPEG/WEBP images**, right in the terminal. Bingo!
+![`ascii_art_generator.py`'s Demo.](assets/ascii_art_generator.gif)
