@@ -5,7 +5,15 @@ Here are enthusiastically reusable scripts for your convenience and amazement!
 ### Contributing ♥
 Thanks for contributing! Feel free to open an Issue to suggest a script or a PR if you have one you're excited to share!
 
-> By the FOSS community, for the FOSS community. 
+### 🎉 Show Your Support
+
+If you find the scripts simply stunning or are intrigued by this great repo, feel free to:
+- ⭐ Star the repository
+- 🍴 Fork it to explore
+- 👀 Watch for updates
+- 📢 Sharing is caring! Why not share it with your family, friends, and your furry companion...
+
+> By the FOSS community, for the FOSS community.
 
 ---
 
